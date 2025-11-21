@@ -9,8 +9,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import {
+  // Mail re-added because user requested an email entry in the contact info block
   Mail,
-  Phone,
   MapPin,
   Calendar,
   Clock,
@@ -20,7 +20,28 @@ import {
   Users,
   CheckCircle,
 } from "lucide-react";
-import { supabase } from "@/lib/supabase";
+
+const contactPageStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  mainEntity: {
+    "@type": "Organization",
+    name: "SNR AUTOMATIONS",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "snrautomations3@gmail.com",
+      contactType: "Customer Service",
+      areaServed: "Worldwide",
+      availableLanguage: "English",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Chennai",
+      addressRegion: "Tamil Nadu",
+      addressCountry: "IN",
+    },
+  },
+};
 
 export default function ContactPage() {
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -102,7 +123,12 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-20">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageStructuredData) }}
+      />
+      <div className="min-h-screen bg-background pt-20">
       {/* Confirmation Popup */}
       {showConfirmation && (
         <motion.div
@@ -155,7 +181,7 @@ export default function ContactPage() {
               Your Business?
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join hundreds of business leaders who have revolutionized their decision-making with SNR Automations.
+              Join hundreds of business leaders who have revolutionized their decision-making with SNR AUTOMATIONS.
               Schedule your personalized demo today.
             </p>
           </motion.div>
@@ -342,25 +368,7 @@ export default function ContactPage() {
                   </p>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Email</div>
-                      <div className="text-muted-foreground">snrautomations3@gmail.com</div>
-                    </div>
-                  </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Phone</div>
-                      <div className="text-muted-foreground">+1 (555) 123-4567</div>
-                    </div>
-                  </div>
 
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
@@ -382,27 +390,19 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <div className="font-semibold">Phone Number</div>
-                      <div className="text-muted-foreground">+91 8946084672</div>
-                      <div className="text-xs text-primary">Available 24/7 for urgent matters</div>
-                    </div>
-                  </div>
-
+                  {/* Add single email address here (user requested a single email entry) */}
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
                       <Mail className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <div className="font-semibold">Email Address</div>
+                      <div className="font-semibold">Email</div>
                       <div className="text-muted-foreground">snrautomations3@gmail.com</div>
                       <div className="text-xs text-primary">Response within 24 hours</div>
                     </div>
                   </div>
+
+                  {/* Phone and Email (top pair) removed per request — keeping office address and hours above */}
                 </CardContent>
               </Card>
 
@@ -445,15 +445,6 @@ export default function ContactPage() {
                   </div>
                 </CardContent>
               </Card>
-
-              {/* Trusted By */}
-              <Card className="glass-card">
-                <CardContent className="p-6 text-center">
-                  <div className="text-sm text-muted-foreground mb-4">Trusted by</div>
-                  <div className="text-2xl font-bold gold-gradient-text mb-2">500+</div>
-                  <div className="text-sm text-muted-foreground">Fortune 500 Companies</div>
-                </CardContent>
-              </Card>
             </motion.div>
           </div>
         </div>
@@ -473,47 +464,43 @@ export default function ContactPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-muted-foreground">
-              Common questions from executives considering SNR Automations
+              Common questions from executives considering SNR AUTOMATIONS
             </p>
           </motion.div>
 
           <div className="space-y-6">
             <Card className="glass-card">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-3">How long does implementation take?</h3>
+                <h3 className="font-semibold mb-3">What makes SNR AUTOMATIONS different from other automation companies?</h3>
                 <p className="text-muted-foreground">
-                  Most Fortune 500 implementations are completed within 4-8 weeks, including data integration,
-                  team training, and system optimization. We provide dedicated project management throughout.
+                  We focus on AI-first, fully customized workflows instead of generic templates. Every automation is engineered around your exact business processes, ensuring accuracy, scalability, and measurable results — not &ldquo;one-size-fits-all&rdquo; solutions.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="glass-card">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-3">What&apos;s included in the demo?</h3>
+                <h3 className="font-semibold mb-3">How long does it take to automate a business workflow?</h3>
                 <p className="text-muted-foreground">
-                  Your 60-minute executive demo includes a personalized dashboard walkthrough using your industry&apos;s
-                  KPIs, live data integration examples, ROI analysis, and a custom implementation roadmap.
+                  Most automation projects take 1–2 weeks from discovery to deployment. Complex multi-system workflows may take 3–4 weeks. We move fast, but without compromising quality or reliability.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="glass-card">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-3">Is there a minimum contract length?</h3>
+                <h3 className="font-semibold mb-3">Do I need technical knowledge to use your automation or SaaS systems?</h3>
                 <p className="text-muted-foreground">
-                  We offer flexible engagement models. Most enterprise clients prefer our 12-month agreements
-                  with quarterly business reviews, but we can accommodate shorter pilots for evaluation.
+                  No. Everything we build is zero-technical-effort for the client. You get clean dashboards, simple controls, and complete onboarding support. If you can operate email, you can operate our systems.
                 </p>
               </CardContent>
             </Card>
 
             <Card className="glass-card">
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-3">What level of support do you provide?</h3>
+                <h3 className="font-semibold mb-3">Can SNR AUTOMATIONS integrate with the tools my business already uses?</h3>
                 <p className="text-muted-foreground">
-                  All clients receive dedicated customer success management, 24/7 technical support,
-                  quarterly strategic reviews, and contact to SNR team for ongoing development.
+                  Yes. We integrate with CRM platforms, marketing tools, payment gateways, communication apps, and almost any software with an API. If your tool supports data exchange, we&apos;ll make it talk to your system — seamlessly.
                 </p>
               </CardContent>
             </Card>
@@ -521,5 +508,6 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

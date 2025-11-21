@@ -32,7 +32,8 @@ const typewriterWords = [
   { text: "Systems" },
 ];
 
-const heroDescription = "Transform your business with intelligent CEO Dashboard systems designed for Fortune 500 executives. Real-time analytics, predictive insights, and automated decision-making in one powerful platform.";
+const heroDescription =
+  "SNR AUTOMATIONS equips executive teams with intelligent dashboards that merge real-time analytics, predictive intelligence, and automated decisioning inside one cohesive platform.";
 
 const stats = [
   { value: "500+", label: "Fortune 500 Clients" },
@@ -80,30 +81,6 @@ const features = [
   },
 ];
 
-const testimonials = [
-  {
-    name: "Rajesh Sharma",
-    role: "CEO, TechnoVision Solutions",
-    company: "Leading IT Services Company",
-    content: "SNR&apos;s CEO Dashboard transformed how we make strategic decisions. The AI insights have increased our operational efficiency by 40% in just 6 months.",
-    rating: 5,
-  },
-  {
-    name: "Priya Nair",
-    role: "Chief Operating Officer",
-    company: "Global Healthcare Leader",
-    content: "The real-time analytics and predictive capabilities are game-changing. We&apos;ve reduced costs by ₹2.3 Crore annually while improving decision-making speed.",
-    rating: 5,
-  },
-  {
-    name: "Arjun Patel",
-    role: "CEO, FinanceFirst Advisors",
-    company: "Investment Management Firm",
-    content: "SNR Automations' with their dashboard system gave our executive team the tools to navigate complex financial markets with confidence.                  ",
-    rating: 5,
-  },
-];
-
 const industries = [
   { name: "Real Estate Agencies", clients: "150+", icon: "🏠" },
   { name: "Healthcare & Wellness Clinics", clients: "95+", icon: "🏥" },
@@ -117,9 +94,35 @@ const industries = [
   { name: "Recruitment & HR Tech Platforms", clients: "55+", icon: "👥" },
 ];
 
+const homePageStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "AI-Powered CEO Dashboard Systems",
+  provider: {
+    "@type": "Organization",
+    name: "SNR AUTOMATIONS",
+    url: "https://snr-automations.com",
+  },
+  areaServed: {
+    "@type": "Place",
+    name: "Worldwide",
+  },
+  description:
+    "SNR AUTOMATIONS delivers executive-ready dashboards that combine real-time analytics, predictive intelligence, and automated decisioning for Fortune 500 leaders.",
+  offers: {
+    "@type": "Offer",
+    description: "AI-Powered CEO Dashboard Systems and Enterprise Automation Solutions",
+  },
+};
+
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageStructuredData) }}
+      />
+      <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <Spotlight />
@@ -328,70 +331,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-24 bg-card/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <Badge variant="outline" className="mb-4">
-              <Award className="w-4 h-4 mr-2" />
-              Client Success Stories
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              What{" "}
-              <span className="gold-gradient-text">Executives</span>{" "}
-              Say About Us
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full glass-card">
-                  <CardContent className="p-6">
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-primary fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-muted-foreground mb-6 italic">
-                      &ldquo;{testimonial.content}&rdquo;
-                    </p>
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center mr-4">
-                        <span className="text-primary font-semibold">
-                          {testimonial.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm text-muted-foreground">
-                          {testimonial.role}
-                        </div>
-                        <div className="text-xs text-primary">
-                          {testimonial.company}
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -410,7 +349,7 @@ export default function HomePage() {
               Your Business?
             </h2>
             <p className="text-xl text-muted-foreground">
-              Join hundreds of Fortune 500 executives who trust SNR Automations 
+              Join hundreds of Fortune 500 executives who trust SNR AUTOMATIONS 
               for their mission-critical business intelligence.
             </p>
             
@@ -433,5 +372,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

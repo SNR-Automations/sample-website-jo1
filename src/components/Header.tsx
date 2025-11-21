@@ -48,11 +48,11 @@ export function Header() {
             >
               <img 
                 src="/images/logo.jpg" 
-                alt="SNR Automations" 
+                alt="SNR AUTOMATIONS logo" 
                 className="h-12 w-auto logo-glow rounded"
               />
               <span className="text-xl font-bold gold-gradient-text">
-                SNR Automations
+                SNR AUTOMATIONS
               </span>
             </motion.div>
           </Link>
