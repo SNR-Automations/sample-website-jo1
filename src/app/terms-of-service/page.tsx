@@ -22,11 +22,11 @@ const sections = [
     content: [
       {
         subtitle: "Agreement to Terms",
-        text: "By accessing or using SNR AUTOMATIONS' website, products, and services (collectively, the 'Services'), you agree to be bound by these Terms of Service ('Terms'). If you do not agree to these Terms, you may not access or use our Services.",
+        text: "By accessing or using SNR AUTOMATIONS&apos; website, products, and services (collectively, the &apos;Services&apos;), you agree to be bound by these Terms of Service (&apos;Terms&apos;). If you do not agree to these Terms, you may not access or use our Services.",
       },
       {
         subtitle: "Modifications",
-        text: "We reserve the right to modify these Terms at any time. We will notify you of material changes by posting the updated Terms on our website and updating the 'Last Updated' date. Your continued use of the Services after such changes constitutes your acceptance of the new Terms.",
+        text: "We reserve the right to modify these Terms at any time. We will notify you of material changes by posting the updated Terms on our website and updating the &apos;Last Updated&apos; date. Your continued use of the Services after such changes constitutes your acceptance of the new Terms.",
       },
       {
         subtitle: "Eligibility",
@@ -40,7 +40,7 @@ const sections = [
     content: [
       {
         subtitle: "AI Automation Services",
-        text: "SNR AUTOMATIONS provides AI-powered automation solutions, including workflow automation, CEO dashboard systems, business intelligence tools, and custom SaaS platform development. Services are provided 'as is' and may be modified, updated, or discontinued at our discretion.",
+        text: "SNR AUTOMATIONS provides AI-powered automation solutions, including workflow automation, CEO dashboard systems, business intelligence tools, and custom SaaS platform development. Services are provided &apos;as is&apos; and may be modified, updated, or discontinued at our discretion.",
       },
       {
         subtitle: "Service Level Agreement",
@@ -62,7 +62,7 @@ const sections = [
       },
       {
         subtitle: "Acceptable Use",
-        text: "You agree to use our Services only for lawful purposes and in accordance with these Terms. You may not use our Services to engage in illegal activities, violate intellectual property rights, transmit malicious code, or interfere with the Services' operation.",
+        text: "You agree to use our Services only for lawful purposes and in accordance with these Terms. You may not use our Services to engage in illegal activities, violate intellectual property rights, transmit malicious code, or interfere with the Services&apos; operation.",
       },
       {
         subtitle: "Data Accuracy",
@@ -128,7 +128,7 @@ const sections = [
       },
       {
         subtitle: "Disclaimer of Warranties",
-        text: "EXCEPT AS EXPRESSLY PROVIDED, OUR SERVICES ARE PROVIDED 'AS IS' AND 'AS AVAILABLE' WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+        text: "EXCEPT AS EXPRESSLY PROVIDED, OUR SERVICES ARE PROVIDED &apos;AS IS&apos; AND &apos;AS AVAILABLE&apos; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
       },
       {
         subtitle: "No Guarantee of Results",
@@ -142,7 +142,7 @@ const sections = [
     content: [
       {
         subtitle: "Liability Cap",
-        text: "TO THE MAXIMUM EXTENT PERMITTED BY LAW, SNR AUTOMATIONS' TOTAL LIABILITY FOR ANY CLAIMS ARISING FROM OR RELATED TO THESE TERMS OR OUR SERVICES SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM.",
+        text: "TO THE MAXIMUM EXTENT PERMITTED BY LAW, SNR AUTOMATIONS&apos; TOTAL LIABILITY FOR ANY CLAIMS ARISING FROM OR RELATED TO THESE TERMS OR OUR SERVICES SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE 12 MONTHS PRECEDING THE CLAIM.",
       },
       {
         subtitle: "Exclusion of Damages",
@@ -279,6 +279,7 @@ export default function TermsOfServicePage() {
           __html: JSON.stringify(termsPageStructuredData),
         }}
       />
+
       <div className="min-h-screen bg-background pt-20">
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-r from-background to-card/30">
@@ -293,14 +294,17 @@ export default function TermsOfServicePage() {
                 <Scale className="w-5 h-5 mr-2 text-primary" />
                 <span className="text-lg font-bold">Terms of Service</span>
               </Badge>
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Legal{" "}
                 <span className="gold-gradient-text">Terms & Conditions</span>
               </h1>
+
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
-                Please read these terms carefully before using SNR AUTOMATIONS'
+                Please read these terms carefully before using SNR AUTOMATIONS&apos;
                 services.
               </p>
+
               <p className="text-sm text-muted-foreground">
                 Last Updated: November 25, 2025
               </p>
@@ -320,10 +324,11 @@ export default function TermsOfServicePage() {
                 <CardContent className="p-8">
                   <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                     These Terms of Service (&quot;Terms&quot;) govern your
-                    access to and use of SNR AUTOMATIONS' website, products, and
-                    services. By using our Services, you agree to be bound by
-                    these Terms.
+                    access to and use of SNR AUTOMATIONS&apos; website, products,
+                    and services. By using our Services, you agree to be bound
+                    by these Terms.
                   </p>
+
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     These Terms constitute a legally binding agreement between
                     you and SNR AUTOMATIONS. If you do not agree to these Terms,
@@ -393,13 +398,16 @@ export default function TermsOfServicePage() {
                   <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Mail className="w-8 h-8 text-primary" />
                   </div>
+
                   <h2 className="text-3xl font-bold mb-4">
                     Questions About These Terms?
                   </h2>
+
                   <p className="text-lg text-muted-foreground mb-6">
                     If you have any questions or concerns about these Terms of
                     Service, please contact our legal team:
                   </p>
+
                   <div className="space-y-2 mb-8">
                     <p className="text-muted-foreground">
                       <strong>Email:</strong> snrautomations3@gmail.com
@@ -408,6 +416,7 @@ export default function TermsOfServicePage() {
                       <strong>Location:</strong> Chennai, Tamil Nadu, India
                     </p>
                   </div>
+
                   <Link href="/contact">
                     <Button size="lg" className="gold-gradient px-8 py-6">
                       Contact Legal Team
