@@ -118,7 +118,7 @@ const faqCategories = [
       {
         question: "Can your solutions scale with our growth?",
         answer:
-          "Absolutely. Our systems are built on modern, scalable architecture using cloud-native technologies. Whether you're processing 100 or 100 million transactions, our infrastructure automatically scales to meet demand without performance degradation.",
+          "Absolutely. Our systems are built on modern, scalable architecture using cloud-native technologies. Whether you&apos;re processing 100 or 100 million transactions, our infrastructure automatically scales to meet demand without performance degradation.",
       },
       {
         question: "What happens if something breaks?",
@@ -134,12 +134,12 @@ const faqCategories = [
       {
         question: "How do we get started?",
         answer:
-          "Schedule a free consultation call where we'll discuss your needs, challenges, and goals. We'll then provide a detailed proposal with timeline and pricing. Once approved, we begin with a discovery phase to map your requirements before development starts.",
+          "Schedule a free consultation call where we&apos;ll discuss your needs, challenges, and goals. We&apos;ll then provide a detailed proposal with timeline and pricing. Once approved, we begin with a discovery phase to map your requirements before development starts.",
       },
       {
         question: "What information do you need from us?",
         answer:
-          "We'll need to understand your current processes, pain points, desired outcomes, existing tech stack, and any specific requirements. During discovery, we'll conduct stakeholder interviews and process mapping sessions to ensure we capture everything.",
+          "We&apos;ll need to understand your current processes, pain points, desired outcomes, existing tech stack, and any specific requirements. During discovery, we&apos;ll conduct stakeholder interviews and process mapping sessions to ensure we capture everything.",
       },
       {
         question: "Can we see a demo before committing?",
@@ -174,6 +174,7 @@ export default function FAQsPage() {
           __html: JSON.stringify(faqsPageStructuredData),
         }}
       />
+
       <div className="min-h-screen bg-background pt-20">
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-r from-background to-card/30">
@@ -190,10 +191,14 @@ export default function FAQsPage() {
                   Frequently Asked Questions
                 </span>
               </Badge>
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Got Questions?{" "}
-                <span className="gold-gradient-text">We've Got Answers</span>
+                <span className="gold-gradient-text">
+                  We&apos;ve Got Answers
+                </span>
               </h1>
+
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Everything you need to know about SNR AUTOMATIONS, our
                 services, and how we can transform your business operations.
@@ -267,6 +272,7 @@ export default function FAQsPage() {
               <h2 className="text-3xl md:text-4xl font-bold">
                 Still Have Questions?
               </h2>
+
               <p className="text-xl text-muted-foreground">
                 Our team is here to help. Schedule a free consultation to
                 discuss your specific needs.
