@@ -62,7 +62,7 @@ const aboutPageStructuredData = {
     name: "SNR AUTOMATIONS",
     founder: {
       "@type": "Person",
-      name: "Miss S.N. Rathnadevi",
+      name: "S N Rathnadevi",
       jobTitle: "Founder & CEO",
       worksFor: {
         "@type": "Organization",
@@ -93,8 +93,8 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <Badge variant="outline" className="mb-6 px-4 py-2">
-              <Star className="w-4 h-4 mr-2 text-primary" />
-              About SNR AUTOMATIONS
+              <Star className="w-5 h-5 mr-2 text-amber-400" />
+              <span className="text-2xl font-extrabold tracking-tight text-foreground">About SNR AUTOMATIONS</span>
             </Badge>
             
             <h1 className="text-5xl md:text-7xl font-bold mb-8">
@@ -103,10 +103,7 @@ export default function AboutPage() {
               with AI
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Founded by visionary leader Miss S.N. Rathnadevi, SNR AUTOMATIONS is dedicated to
-              transforming businesses through intelligent automation and AI-powered solutions.
-            </p>
+            {/* Removed CEO intro passage as requested */}
           </motion.div>
         </div>
       </section>
@@ -132,7 +129,7 @@ export default function AboutPage() {
                 Meet Our <span className="gold-gradient-text">Founder</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Miss S.N. Rathnadevi leads SNR AUTOMATIONS with a relentless focus on precision,
+                Miss S N Rathnadevi leads SNR AUTOMATIONS with a relentless focus on precision,
                 integrity, and executive-level outcomes. Her experience architecting automation
                 programs for enterprise teams helps clients convert messy data into decisive intelligence.
               </p>
@@ -140,12 +137,7 @@ export default function AboutPage() {
                 <div className="rounded-2xl border border-border/40 bg-card/40 p-4">
                   <p className="text-sm uppercase tracking-wide text-muted-foreground">Impact</p>
                   <p className="text-2xl font-bold">120+</p>
-                  <p className="text-sm text-muted-foreground">automation workflows delivered</p>
-                </div>
-                <div className="rounded-2xl border border-border/40 bg-card/40 p-4">
-                  <p className="text-sm uppercase tracking-wide text-muted-foreground">Experience</p>
-                  <p className="text-2xl font-bold">10+ yrs</p>
-                  <p className="text-sm text-muted-foreground">scaling enterprise operations</p>
+                  <p className="text-sm text-muted-foreground">Projects delivered</p>
                 </div>
                 <div className="rounded-2xl border border-border/40 bg-card/40 p-4">
                   <p className="text-sm uppercase tracking-wide text-muted-foreground">Recognition</p>
@@ -224,7 +216,6 @@ export default function AboutPage() {
               <div className="relative h-full p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
                 {/* Gradient background */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="mb-6">
@@ -235,7 +226,6 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Our Mission</h3>
                   </div>
-                  
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     Building an all-in-one AI platform that replaces chaos with clarity for business 
                     leaders worldwide. We believe that every business, regardless of size, should have 
@@ -243,7 +233,6 @@ export default function AboutPage() {
                     accelerate their growth.
                   </p>
                 </div>
-                
                 {/* Bottom gradient line */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </div>
@@ -258,7 +247,6 @@ export default function AboutPage() {
               <div className="relative h-full p-8 rounded-2xl bg-card border border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
                 {/* Gradient background */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="mb-6">
@@ -269,7 +257,6 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-3xl font-bold mb-4 group-hover:text-primary transition-colors">Our Vision</h3>
                   </div>
-                  
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     To create a future where AI and automation empower every student, founder and 
                     business to scale without limits. We envision a world where technology serves 
@@ -277,7 +264,6 @@ export default function AboutPage() {
                     their full potential.
                   </p>
                 </div>
-                
                 {/* Bottom gradient line */}
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-b-2xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
               </div>

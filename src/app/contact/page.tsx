@@ -171,10 +171,12 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <Badge variant="outline" className="mb-4">
-              <Calendar className="w-4 h-4 mr-2" />
-              Schedule Your Executive Demo
-            </Badge>
+            <div className="flex justify-center mb-4">
+              <Badge variant="outline" className="px-4 py-2 flex items-center">
+                <Calendar className="w-5 h-5 mr-2 text-amber-400" />
+                <span className="text-2xl font-extrabold tracking-tight text-foreground">Schedule Your Executive Demo</span>
+              </Badge>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Ready to{" "}
               <span className="gold-gradient-text">Transform</span>{" "}

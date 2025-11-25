@@ -141,8 +141,8 @@ export default function HomePage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <Badge variant="outline" className="px-4 py-2 text-sm border-primary/20 bg-primary/10">
-                <Star className="w-4 h-4 mr-2 text-primary" />
-                Trusted by Fortune 500 Executives
+                <Star className="w-6 h-6 mr-3 text-primary" />
+                <span className="text-xl font-bold">Trusted by Fortune 500 Executives</span>
               </Badge>
             </motion.div>
 

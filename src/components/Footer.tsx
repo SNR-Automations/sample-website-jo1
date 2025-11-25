@@ -92,7 +92,45 @@ export function Footer() {
             </motion.div>
           </div>
 
-          {/* Links removed per user request */}
+          {/* Legal Links */}
+          <div className="lg:col-span-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="font-semibold text-foreground mb-4">
+                Legal
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/faqs"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    FAQs
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/privacy-policy"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/terms-of-service"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
 
           {/* Newsletter */}
           <div className="lg:col-span-6">
