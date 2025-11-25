@@ -14,75 +14,89 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://snr-automations.com"),
+  metadataBase: new URL("https://snrautomations.com"),
+
   title: {
-    default: "SNR AUTOMATIONS — AI-Powered CEO Dashboard Systems | Enterprise Automation",
+    default:
+      "SNR AUTOMATIONS — AI-Powered CEO Dashboard Systems | Enterprise Automation",
     template: "%s | SNR AUTOMATIONS",
   },
+
   description:
-    "SNR AUTOMATIONS delivers executive-ready dashboards that combine real-time analytics, predictive intelligence, and automated decisioning for Fortune 500 leaders. Transform your business with AI-powered automation.",
+    "SNR AUTOMATIONS delivers executive-ready dashboards with real-time analytics, predictive intelligence, and AI automation for Fortune 500 leaders.",
+
   keywords: [
     "SNR AUTOMATIONS",
     "CEO Dashboard",
     "AI Automation",
-    "Business Intelligence",
-    "Executive Analytics",
-    "Fortune 500",
-    "Automation Partner",
     "Enterprise Automation",
-    "AI-Powered Solutions",
-    "Business Automation",
-    "Executive Dashboard",
+    "Business Intelligence",
+    "AI Solutions",
     "Predictive Analytics",
-    "Real-time Analytics",
-    "SaaS Solutions",
+    "SaaS Automation",
+    "Executive Dashboard",
     "Workflow Automation",
   ],
+
   authors: [{ name: "SNR AUTOMATIONS" }],
   creator: "SNR AUTOMATIONS",
   publisher: "SNR AUTOMATIONS",
+
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+
+  // 🔥 Correct favicon config using your generated icons
   icons: {
-    icon: '/images/logo.jpg',
-    shortcut: '/images/logo.jpg',
-    apple: '/images/logo.jpg',
+    icon: [
+      { url: "/favicon-16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [{ url: "/favicon-180.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
   },
-  manifest: '/site.webmanifest',
+
+  manifest: "/site.webmanifest",
+
+  // --- OpenGraph ---
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://snr-automations.com",
+    url: "https://snrautomations.com",
     siteName: "SNR AUTOMATIONS",
     title: "SNR AUTOMATIONS — AI-Powered CEO Dashboard Systems",
     description:
-      "Experience executive dashboards engineered by SNR AUTOMATIONS for decisive, data-driven leadership. Trusted by Fortune 500 executives.",
+      "Executive dashboards, predictive analytics, and enterprise automation built for Fortune 500 leadership.",
     images: [
       {
-        url: "/images/logo.jpg",
+        url: "/favicon-512.png",
         width: 1200,
         height: 630,
-        alt: "SNR AUTOMATIONS - AI-Powered CEO Dashboard Systems",
+        alt: "SNR Automations",
       },
     ],
   },
+
+  // --- Twitter cards ---
   twitter: {
     card: "summary_large_image",
     title: "SNR AUTOMATIONS — AI-Powered CEO Dashboard Systems",
     description:
-      "Intelligent dashboards, predictive analytics, and executive automation from SNR AUTOMATIONS.",
-    images: ["/images/logo.jpg"],
+      "Intelligent dashboards, predictive analytics, and enterprise automation for global businesses.",
+    images: ["/favicon-512.png"],
     creator: "@snrautomations",
   },
+
   robots: {
     index: true,
     follow: true,
@@ -94,25 +108,23 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    // Add your verification codes here when available
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
-  },
+
   alternates: {
-    canonical: "https://snr-automations.com",
+    canonical: "https://snrautomations.com",
   },
+
   category: "Technology",
 };
 
+// --- Schema.org Organization Data ---
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "SNR AUTOMATIONS",
-  url: "https://snr-automations.com",
-  logo: "https://snr-automations.com/images/logo.jpg",
-  description: "SNR AUTOMATIONS delivers AI-powered CEO Dashboard systems and enterprise automation solutions for Fortune 500 executives.",
+  url: "https://snrautomations.com",
+  logo: "https://snrautomations.com/favicon-512.png",
+  description:
+    "AI-powered CEO dashboard systems and enterprise automation solutions for global businesses.",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Chennai",
@@ -134,39 +146,32 @@ const structuredData = {
     name: "Miss S.N. Rathnadevi",
     jobTitle: "Founder & CEO",
   },
-  areaServed: {
-    "@type": "Place",
-    name: "Worldwide",
-  },
   serviceType: [
     "AI Automation",
     "CEO Dashboard Systems",
     "Business Intelligence",
-    "Enterprise Automation",
-    "SaaS Solutions",
+    "Automation SaaS",
   ],
 };
 
+// --- Website Schema ---
 const websiteStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "SNR AUTOMATIONS",
-  url: "https://snr-automations.com",
+  url: "https://snrautomations.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://snr-automations.com/search?q={search_term_string}",
-    },
+    target: "https://snrautomations.com/search?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className="dark">
       <head>
@@ -176,16 +181,19 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteStructuredData),
+          }}
         />
       </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased bg-background text-foreground min-h-screen`}
       >
         <Header />
-        <main className="flex-1">
-          {children}
-        </main>
+
+        <main className="flex-1">{children}</main>
+
         <Footer />
       </body>
     </html>
